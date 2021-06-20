@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTTP常见的状态码以及对应的含义 | salvatore&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Live is what? Get busy living, Or get busy dying">
+    <link rel="preload" href="/assets/css/0.styles.09b7f27a.css" as="style"><link rel="preload" href="/assets/js/app.5811eb28.js" as="script"><link rel="preload" href="/assets/js/2.1bcd2ba4.js" as="script"><link rel="preload" href="/assets/js/92.9b60f1ad.js" as="script"><link rel="prefetch" href="/assets/js/10.d01e2cb3.js"><link rel="prefetch" href="/assets/js/100.4b5c8383.js"><link rel="prefetch" href="/assets/js/101.36e4ffa2.js"><link rel="prefetch" href="/assets/js/102.9ca13dc6.js"><link rel="prefetch" href="/assets/js/103.aa2d8ded.js"><link rel="prefetch" href="/assets/js/104.8f009307.js"><link rel="prefetch" href="/assets/js/105.a497e3f1.js"><link rel="prefetch" href="/assets/js/106.18fc23ae.js"><link rel="prefetch" href="/assets/js/107.225f8698.js"><link rel="prefetch" href="/assets/js/108.afb0da70.js"><link rel="prefetch" href="/assets/js/109.95e2afdb.js"><link rel="prefetch" href="/assets/js/11.8583efd5.js"><link rel="prefetch" href="/assets/js/110.58273b83.js"><link rel="prefetch" href="/assets/js/111.7e8ac226.js"><link rel="prefetch" href="/assets/js/112.0695e754.js"><link rel="prefetch" href="/assets/js/113.084e7cce.js"><link rel="prefetch" href="/assets/js/114.8512d4c0.js"><link rel="prefetch" href="/assets/js/115.fee0e3da.js"><link rel="prefetch" href="/assets/js/116.2d822d52.js"><link rel="prefetch" href="/assets/js/12.cb0c23bb.js"><link rel="prefetch" href="/assets/js/13.5a7dc34f.js"><link rel="prefetch" href="/assets/js/14.788460da.js"><link rel="prefetch" href="/assets/js/15.4e84d512.js"><link rel="prefetch" href="/assets/js/16.d57b0873.js"><link rel="prefetch" href="/assets/js/17.09413332.js"><link rel="prefetch" href="/assets/js/18.e2546c9d.js"><link rel="prefetch" href="/assets/js/19.808a9d72.js"><link rel="prefetch" href="/assets/js/20.3c17f526.js"><link rel="prefetch" href="/assets/js/21.c6a28f4b.js"><link rel="prefetch" href="/assets/js/22.62ae5e34.js"><link rel="prefetch" href="/assets/js/23.8296e711.js"><link rel="prefetch" href="/assets/js/24.a95199a5.js"><link rel="prefetch" href="/assets/js/25.0c370645.js"><link rel="prefetch" href="/assets/js/26.6f42c9c3.js"><link rel="prefetch" href="/assets/js/27.63ade94d.js"><link rel="prefetch" href="/assets/js/28.c86baa3c.js"><link rel="prefetch" href="/assets/js/29.dfa33feb.js"><link rel="prefetch" href="/assets/js/3.ad80d19e.js"><link rel="prefetch" href="/assets/js/30.24244679.js"><link rel="prefetch" href="/assets/js/31.c6ba2a0a.js"><link rel="prefetch" href="/assets/js/32.88f954a0.js"><link rel="prefetch" href="/assets/js/33.0c45cea6.js"><link rel="prefetch" href="/assets/js/34.dffdbda7.js"><link rel="prefetch" href="/assets/js/35.c62f1a95.js"><link rel="prefetch" href="/assets/js/36.0db41660.js"><link rel="prefetch" href="/assets/js/37.ef714cca.js"><link rel="prefetch" href="/assets/js/38.5bfbc215.js"><link rel="prefetch" href="/assets/js/39.a62c4856.js"><link rel="prefetch" href="/assets/js/4.0f40e03e.js"><link rel="prefetch" href="/assets/js/40.7d3a539a.js"><link rel="prefetch" href="/assets/js/41.af9e9d42.js"><link rel="prefetch" href="/assets/js/42.b805e114.js"><link rel="prefetch" href="/assets/js/43.d63195a7.js"><link rel="prefetch" href="/assets/js/44.2a7d304f.js"><link rel="prefetch" href="/assets/js/45.99ec876e.js"><link rel="prefetch" href="/assets/js/46.d0fd131d.js"><link rel="prefetch" href="/assets/js/47.e1b71b32.js"><link rel="prefetch" href="/assets/js/48.eca92f8c.js"><link rel="prefetch" href="/assets/js/49.18a56810.js"><link rel="prefetch" href="/assets/js/5.6251623e.js"><link rel="prefetch" href="/assets/js/50.40e84722.js"><link rel="prefetch" href="/assets/js/51.d33e2ca2.js"><link rel="prefetch" href="/assets/js/52.30f662d7.js"><link rel="prefetch" href="/assets/js/53.434e5d96.js"><link rel="prefetch" href="/assets/js/54.b320dc90.js"><link rel="prefetch" href="/assets/js/55.7467cd5d.js"><link rel="prefetch" href="/assets/js/56.8d105beb.js"><link rel="prefetch" href="/assets/js/57.11fd0b96.js"><link rel="prefetch" href="/assets/js/58.d069c47a.js"><link rel="prefetch" href="/assets/js/59.df1167e7.js"><link rel="prefetch" href="/assets/js/6.5f173d71.js"><link rel="prefetch" href="/assets/js/60.c48d9ca6.js"><link rel="prefetch" href="/assets/js/61.ca8637ce.js"><link rel="prefetch" href="/assets/js/62.3fe4b6f6.js"><link rel="prefetch" href="/assets/js/63.f7ab9b9f.js"><link rel="prefetch" href="/assets/js/64.2332036f.js"><link rel="prefetch" href="/assets/js/65.b2b33067.js"><link rel="prefetch" href="/assets/js/66.c8cee1d0.js"><link rel="prefetch" href="/assets/js/67.53c6e8e1.js"><link rel="prefetch" href="/assets/js/68.6e356321.js"><link rel="prefetch" href="/assets/js/69.4b97ff42.js"><link rel="prefetch" href="/assets/js/7.a96845db.js"><link rel="prefetch" href="/assets/js/70.4fb4bbab.js"><link rel="prefetch" href="/assets/js/71.5d060a53.js"><link rel="prefetch" href="/assets/js/72.21498d49.js"><link rel="prefetch" href="/assets/js/73.79c79b25.js"><link rel="prefetch" href="/assets/js/74.e8a6a8c6.js"><link rel="prefetch" href="/assets/js/75.337aaff5.js"><link rel="prefetch" href="/assets/js/76.441f38e1.js"><link rel="prefetch" href="/assets/js/77.6e823c7c.js"><link rel="prefetch" href="/assets/js/78.f0099c68.js"><link rel="prefetch" href="/assets/js/79.255a8000.js"><link rel="prefetch" href="/assets/js/8.f47c3b01.js"><link rel="prefetch" href="/assets/js/80.c6f5c44b.js"><link rel="prefetch" href="/assets/js/81.dddd517d.js"><link rel="prefetch" href="/assets/js/82.9c14cdeb.js"><link rel="prefetch" href="/assets/js/83.eceeb699.js"><link rel="prefetch" href="/assets/js/84.eabf3ddb.js"><link rel="prefetch" href="/assets/js/85.6636f6b6.js"><link rel="prefetch" href="/assets/js/86.e2b93195.js"><link rel="prefetch" href="/assets/js/87.58176135.js"><link rel="prefetch" href="/assets/js/88.adc95a3d.js"><link rel="prefetch" href="/assets/js/89.b0e250c8.js"><link rel="prefetch" href="/assets/js/9.0f4582c7.js"><link rel="prefetch" href="/assets/js/90.063a4723.js"><link rel="prefetch" href="/assets/js/91.3618430c.js"><link rel="prefetch" href="/assets/js/93.74bd1b94.js"><link rel="prefetch" href="/assets/js/94.c71fe7ea.js"><link rel="prefetch" href="/assets/js/95.9a7f87fd.js"><link rel="prefetch" href="/assets/js/96.3511f478.js"><link rel="prefetch" href="/assets/js/97.55c83c1d.js"><link rel="prefetch" href="/assets/js/98.11468cae.js"><link rel="prefetch" href="/assets/js/99.5921fac5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.09b7f27a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">salvatore's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link router-link-active">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link router-link-active">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MiniProgrem</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>nodeJS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>internet</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/posts/internet/" aria-current="page" class="sidebar-link">HTTP1.x-HTTP2-HTTPS</a></li><li><a href="/posts/internet/JWT.html" class="sidebar-link">JSON WEB TOKEN</a></li><li><a href="/posts/internet/多个请求如何书写.html" class="sidebar-link">多个请求如何书写</a></li><li><a href="/posts/internet/TCP的3次握手.html" class="sidebar-link">TCP 的三次握手四次挥手的相关知识</a></li><li><a href="/posts/internet/常见的状态码.html" class="active sidebar-link">HTTP常见的状态码以及对应的含义</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MicroFrontends</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>tool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>question</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="http常见的状态码以及对应的含义"><a href="#http常见的状态码以及对应的含义" class="header-anchor">#</a> HTTP常见的状态码以及对应的含义</h1> <table><thead><tr><th>状态</th> <th>类别</th> <th>原因</th></tr></thead> <tbody><tr><td>1XX</td> <td>Informational（信息性状态码）</td> <td>接收的请求正在处理</td></tr> <tr><td>2XX</td> <td>Success（成功状态码）</td> <td>请求正常处理完毕</td></tr> <tr><td>3XX</td> <td>Redirection（重定向状态码）</td> <td>需要进行附加操作以完成请求</td></tr> <tr><td>4XX</td> <td>Client Error（客户端错误状态码）</td> <td>服务器无法处理请求</td></tr> <tr><td>5XX</td> <td>Server Error（服务器错误状态码）</td> <td>服务器处理请求错误</td></tr></tbody></table> <h2 id="_2xx"><a href="#_2xx" class="header-anchor">#</a> 2XX</h2> <p>200 OK 成功</p> <p>204 No Content 该状态码代表服务器接收的请求已经成功处理，但在返回的响应报文中不含实体的主体部分。另外，也不允许返回任何实体的内容。</p> <p>206 Partial Content 该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。</p> <h2 id="_3xx"><a href="#_3xx" class="header-anchor">#</a> 3XX</h2> <p>301 Moved Permanently 永久重定向。该状态码表示请求的资源已经被分配了新的URI，以后应该使用资源现在所指的URI。</p> <p>302 Found 临时性重定向。该状态码表示请求的资源已经分配了新的URI，希望用户（本次）能使用新的URI访问。</p> <p>304 Not Modified 该状态码表示客户端发送附带条件的请求时，服务器允许请求访问资源，但因为请求未满足条件的情况后，直接返回304（服务器端资源未改变，可直接使用客户端未过期的缓存）。</p> <h2 id="_4xx"><a href="#_4xx" class="header-anchor">#</a> 4XX</h2> <p>400 Bad Request 该状态码表示请求报文中存在语法错误。当错误发生时，需修改请求的内容后再发送请求。</p> <p>401 Unauthorized 未授权，表示发送的请求需要通过认证。</p> <p>403 Forbidden 该状态码表明对请求资源的访问被服务器拒绝了。</p> <p>404 Not Found 服务器没有请求的资源。</p> <h2 id="_5xx"><a href="#_5xx" class="header-anchor">#</a> 5XX</h2> <p>500 Internal Server Error 服务器在执行请求时发生了错误。</p> <p>503 Service Unavailable 表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</p> <p>之前读过一篇文章，讲状态码讲的挺好的<a href="https://segmentfault.com/a/1190000014100927" target="_blank" rel="noopener noreferrer">链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">10/15/2020, 8:13:38 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/posts/internet/TCP的3次握手.html" class="prev">
+        TCP 的三次握手四次挥手的相关知识
+      </a></span> <span class="next"><a href="/posts/MicroFE/">
+        微前端
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5811eb28.js" defer></script><script src="/assets/js/2.1bcd2ba4.js" defer></script><script src="/assets/js/92.9b60f1ad.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>外连接查询 | salvatore&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Live is what? Get busy living, Or get busy dying">
+    <link rel="preload" href="/assets/css/0.styles.09b7f27a.css" as="style"><link rel="preload" href="/assets/js/app.5811eb28.js" as="script"><link rel="preload" href="/assets/js/2.1bcd2ba4.js" as="script"><link rel="preload" href="/assets/js/77.6e823c7c.js" as="script"><link rel="prefetch" href="/assets/js/10.d01e2cb3.js"><link rel="prefetch" href="/assets/js/100.4b5c8383.js"><link rel="prefetch" href="/assets/js/101.36e4ffa2.js"><link rel="prefetch" href="/assets/js/102.9ca13dc6.js"><link rel="prefetch" href="/assets/js/103.aa2d8ded.js"><link rel="prefetch" href="/assets/js/104.8f009307.js"><link rel="prefetch" href="/assets/js/105.a497e3f1.js"><link rel="prefetch" href="/assets/js/106.18fc23ae.js"><link rel="prefetch" href="/assets/js/107.225f8698.js"><link rel="prefetch" href="/assets/js/108.afb0da70.js"><link rel="prefetch" href="/assets/js/109.95e2afdb.js"><link rel="prefetch" href="/assets/js/11.8583efd5.js"><link rel="prefetch" href="/assets/js/110.58273b83.js"><link rel="prefetch" href="/assets/js/111.7e8ac226.js"><link rel="prefetch" href="/assets/js/112.0695e754.js"><link rel="prefetch" href="/assets/js/113.084e7cce.js"><link rel="prefetch" href="/assets/js/114.8512d4c0.js"><link rel="prefetch" href="/assets/js/115.fee0e3da.js"><link rel="prefetch" href="/assets/js/116.2d822d52.js"><link rel="prefetch" href="/assets/js/12.cb0c23bb.js"><link rel="prefetch" href="/assets/js/13.5a7dc34f.js"><link rel="prefetch" href="/assets/js/14.788460da.js"><link rel="prefetch" href="/assets/js/15.4e84d512.js"><link rel="prefetch" href="/assets/js/16.d57b0873.js"><link rel="prefetch" href="/assets/js/17.09413332.js"><link rel="prefetch" href="/assets/js/18.e2546c9d.js"><link rel="prefetch" href="/assets/js/19.808a9d72.js"><link rel="prefetch" href="/assets/js/20.3c17f526.js"><link rel="prefetch" href="/assets/js/21.c6a28f4b.js"><link rel="prefetch" href="/assets/js/22.62ae5e34.js"><link rel="prefetch" href="/assets/js/23.8296e711.js"><link rel="prefetch" href="/assets/js/24.a95199a5.js"><link rel="prefetch" href="/assets/js/25.0c370645.js"><link rel="prefetch" href="/assets/js/26.6f42c9c3.js"><link rel="prefetch" href="/assets/js/27.63ade94d.js"><link rel="prefetch" href="/assets/js/28.c86baa3c.js"><link rel="prefetch" href="/assets/js/29.dfa33feb.js"><link rel="prefetch" href="/assets/js/3.ad80d19e.js"><link rel="prefetch" href="/assets/js/30.24244679.js"><link rel="prefetch" href="/assets/js/31.c6ba2a0a.js"><link rel="prefetch" href="/assets/js/32.88f954a0.js"><link rel="prefetch" href="/assets/js/33.0c45cea6.js"><link rel="prefetch" href="/assets/js/34.dffdbda7.js"><link rel="prefetch" href="/assets/js/35.c62f1a95.js"><link rel="prefetch" href="/assets/js/36.0db41660.js"><link rel="prefetch" href="/assets/js/37.ef714cca.js"><link rel="prefetch" href="/assets/js/38.5bfbc215.js"><link rel="prefetch" href="/assets/js/39.a62c4856.js"><link rel="prefetch" href="/assets/js/4.0f40e03e.js"><link rel="prefetch" href="/assets/js/40.7d3a539a.js"><link rel="prefetch" href="/assets/js/41.af9e9d42.js"><link rel="prefetch" href="/assets/js/42.b805e114.js"><link rel="prefetch" href="/assets/js/43.d63195a7.js"><link rel="prefetch" href="/assets/js/44.2a7d304f.js"><link rel="prefetch" href="/assets/js/45.99ec876e.js"><link rel="prefetch" href="/assets/js/46.d0fd131d.js"><link rel="prefetch" href="/assets/js/47.e1b71b32.js"><link rel="prefetch" href="/assets/js/48.eca92f8c.js"><link rel="prefetch" href="/assets/js/49.18a56810.js"><link rel="prefetch" href="/assets/js/5.6251623e.js"><link rel="prefetch" href="/assets/js/50.40e84722.js"><link rel="prefetch" href="/assets/js/51.d33e2ca2.js"><link rel="prefetch" href="/assets/js/52.30f662d7.js"><link rel="prefetch" href="/assets/js/53.434e5d96.js"><link rel="prefetch" href="/assets/js/54.b320dc90.js"><link rel="prefetch" href="/assets/js/55.7467cd5d.js"><link rel="prefetch" href="/assets/js/56.8d105beb.js"><link rel="prefetch" href="/assets/js/57.11fd0b96.js"><link rel="prefetch" href="/assets/js/58.d069c47a.js"><link rel="prefetch" href="/assets/js/59.df1167e7.js"><link rel="prefetch" href="/assets/js/6.5f173d71.js"><link rel="prefetch" href="/assets/js/60.c48d9ca6.js"><link rel="prefetch" href="/assets/js/61.ca8637ce.js"><link rel="prefetch" href="/assets/js/62.3fe4b6f6.js"><link rel="prefetch" href="/assets/js/63.f7ab9b9f.js"><link rel="prefetch" href="/assets/js/64.2332036f.js"><link rel="prefetch" href="/assets/js/65.b2b33067.js"><link rel="prefetch" href="/assets/js/66.c8cee1d0.js"><link rel="prefetch" href="/assets/js/67.53c6e8e1.js"><link rel="prefetch" href="/assets/js/68.6e356321.js"><link rel="prefetch" href="/assets/js/69.4b97ff42.js"><link rel="prefetch" href="/assets/js/7.a96845db.js"><link rel="prefetch" href="/assets/js/70.4fb4bbab.js"><link rel="prefetch" href="/assets/js/71.5d060a53.js"><link rel="prefetch" href="/assets/js/72.21498d49.js"><link rel="prefetch" href="/assets/js/73.79c79b25.js"><link rel="prefetch" href="/assets/js/74.e8a6a8c6.js"><link rel="prefetch" href="/assets/js/75.337aaff5.js"><link rel="prefetch" href="/assets/js/76.441f38e1.js"><link rel="prefetch" href="/assets/js/78.f0099c68.js"><link rel="prefetch" href="/assets/js/79.255a8000.js"><link rel="prefetch" href="/assets/js/8.f47c3b01.js"><link rel="prefetch" href="/assets/js/80.c6f5c44b.js"><link rel="prefetch" href="/assets/js/81.dddd517d.js"><link rel="prefetch" href="/assets/js/82.9c14cdeb.js"><link rel="prefetch" href="/assets/js/83.eceeb699.js"><link rel="prefetch" href="/assets/js/84.eabf3ddb.js"><link rel="prefetch" href="/assets/js/85.6636f6b6.js"><link rel="prefetch" href="/assets/js/86.e2b93195.js"><link rel="prefetch" href="/assets/js/87.58176135.js"><link rel="prefetch" href="/assets/js/88.adc95a3d.js"><link rel="prefetch" href="/assets/js/89.b0e250c8.js"><link rel="prefetch" href="/assets/js/9.0f4582c7.js"><link rel="prefetch" href="/assets/js/90.063a4723.js"><link rel="prefetch" href="/assets/js/91.3618430c.js"><link rel="prefetch" href="/assets/js/92.9b60f1ad.js"><link rel="prefetch" href="/assets/js/93.74bd1b94.js"><link rel="prefetch" href="/assets/js/94.c71fe7ea.js"><link rel="prefetch" href="/assets/js/95.9a7f87fd.js"><link rel="prefetch" href="/assets/js/96.3511f478.js"><link rel="prefetch" href="/assets/js/97.55c83c1d.js"><link rel="prefetch" href="/assets/js/98.11468cae.js"><link rel="prefetch" href="/assets/js/99.5921fac5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.09b7f27a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">salvatore's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MiniProgrem</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>nodeJS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>mysql</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/posts/MySql/" aria-current="page" class="sidebar-link">MySql 关系性数据库</a></li><li><a href="/posts/MySql/基本数据库知识.html" class="sidebar-link">基本数据库知识</a></li><li><a href="/posts/MySql/有哪些数据库管理系统.html" class="sidebar-link">有哪些数据库管理系统</a></li><li><a href="/posts/MySql/储存引擎.html" class="sidebar-link">储存引擎</a></li><li><a href="/posts/MySql/三范式.html" class="sidebar-link">数据库设计三范式</a></li><li><a href="/posts/MySql/外连接查询.html" class="active sidebar-link">外连接查询</a></li><li><a href="/posts/MySql/增删改.html" class="sidebar-link">增删改</a></li><li><a href="/posts/MySql/limit.html" class="sidebar-link">union(可以将查询结果集相加)</a></li><li><a href="/posts/MySql/约束.html" class="sidebar-link">约束（constraint）</a></li><li><a href="/posts/MySql/子查询.html" class="sidebar-link">子查询</a></li><li><a href="/posts/MySql/索引.html" class="sidebar-link">索引</a></li><li><a href="/posts/MySql/事务.html" class="sidebar-link">事务</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>internet</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MicroFrontends</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>tool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>question</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="外连接查询"><a href="#外连接查询" class="header-anchor">#</a> 外连接查询</h1> <h2 id="_1-关于查询结果集的去重"><a href="#_1-关于查询结果集的去重" class="header-anchor">#</a> 1. 关于查询结果集的去重</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select distinct job from emp;
++-----------+
+| job       |
++-----------+
+| CLERK     |
+| SALESMAN  |
+| MANAGER   |
+| ANALYST   |
+| PRESIDENT |
++-----------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,distinct job from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct job from emp' at line 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>distinct 只能出现在所有字段的前方，后面所有的字段联合起来，所有的去重</p> <p>统计岗位的数量</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select count(distinct job) from emp;
++---------------------+
+| count(distinct job) |
++---------------------+
+|                   5 |
++---------------------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_2-链接查询"><a href="#_2-链接查询" class="header-anchor">#</a> 2. 链接查询</h2> <ul><li>什么是链接查询</li></ul> <p>在实际开发中，大部分的情况都不是从单边中查询数据，一般都是多张表联合查询取出最终结果。</p> <p>在实际开发过程中，一般一个业务都会对应多张表，eg:学生喝班级，起码两张表</p> <p>学生和编辑信息存储到一张表中，数据会十分的冗余</p> <ul><li>连接查询的分类？</li></ul> <ul><li>根据语法出现的年代划分的话，包括：</li></ul> <ol><li>SQL92(一些老的DBA可能还在使用这种语法，DBA：Database Administrator, 数据库管理员)</li> <li>SQL99(比较新的语法)</li></ol> <ul><li>根据表的连接方式来划分，包括：</li></ul> <ol><li>内连接：</li></ol> <ul><li>等值连接</li> <li>非等值连接</li> <li>自连接</li></ul> <ol start="2"><li>外连接：</li></ol> <ul><li>左外连接（左连接）</li> <li>右外连接（右连接）</li></ul> <ol start="3"><li>全连接（很少用）</li></ol> <ul><li>在表的连接查询方面有一种现象：笛卡儿积现象（笛卡尔乘积现象）</li></ul> <p>找出每个员工的部门名称，要求显示员工和部门名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,dname from emp,dept;
++--------+------------+
+| ename  | dname      |
++--------+------------+
+| SMITH  | ACCOUNTING |
+| SMITH  | RESEARCH   |
+| SMITH  | SALES      |
+| SMITH  | OPERATIONS |
+| ALLEN  | ACCOUNTING |
+| ALLEN  | RESEARCH   |
+| ALLEN  | SALES      |
+| ALLEN  | OPERATIONS |
++--------+------------+
+56 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>? 笛卡儿积现象：当两张表进行连接查询的时候，没有任何条件限制，最终的查询结果条数是两张表记录条数的乘积</p> <p>关于表的别名：</p> <p>select e.ename,d.dname from emp e,dept d;</p> <p>别的别名的好处？</p> <ol><li>第一：可执行效率高</li> <li>第二：可读性好</li></ol> <ul><li>怎么避免笛卡儿积现象？当然是加条件进行过滤。</li></ul> <p>思考：避免了笛卡尔积，会减少记录的匹配次数吗？不会的，还是56次查询，只是显示的是有效的记录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select e.ename,d.dname from emp e,dept d where e.deptno = d.deptno;
++--------+------------+
+| ename  | dname      |
++--------+------------+
+| CLARK  | ACCOUNTING |
+| KING   | ACCOUNTING |
+| MILLER | ACCOUNTING |
+| SMITH  | RESEARCH   |
+| JONES  | RESEARCH   |
+| SCOTT  | RESEARCH   |
+| ADAMS  | RESEARCH   |
+| FORD   | RESEARCH   |
+| ALLEN  | SALES      |
+| WARD   | SALES      |
+| MARTIN | SALES      |
+| BLAKE  | SALES      |
+| TURNER | SALES      |
+| JAMES  | SALES      |
++--------+------------+
+14 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>上面这种等号的方法是SQL92的写法，以后不用</p> <ul><li>2.1.1 内连接之等值连接，最大的特点是：条件是等量关系</li></ul> <p>查询每个员工的部门名称，要求显示员工名和部门名</p> <p>SQL99语法：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select e.ename,d.dname from emp e join dept d on e.deptno=d.deptno;
++--------+------------+
+| ename  | dname      |
++--------+------------+
+| CLARK  | ACCOUNTING |
+| KING   | ACCOUNTING |
+| MILLER | ACCOUNTING |
+| SMITH  | RESEARCH   |
+| JONES  | RESEARCH   |
+| SCOTT  | RESEARCH   |
+| ADAMS  | RESEARCH   |
+| FORD   | RESEARCH   |
+| ALLEN  | SALES      |
+| WARD   | SALES      |
+| MARTIN | SALES      |
+| BLAKE  | SALES      |
+| TURNER | SALES      |
+| JAMES  | SALES      |
++--------+------------+
+14 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>select
+  e.ename,d.dname
+from
+  emp e
+inner join
+  dept d
+on
+  e.deptno=d.deptno
+;
+语法：
+...
+  A
+inner join
+  B
+on
+  连接条件
+where
+  过滤条件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>inner：内连接，可省略，带上是可读性好一些</p> <ul><li>2.1.2 内连接的非等值连接：最大的特点是：连接条件中的关系是非等量关系</li></ul> <p>找出员工的工资等级，要求显示员工名、工资、工资等级</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select e.ename,e.sal,s.grade from emp e join salgrade s on e.sal between s.losal and s.hisal;
++--------+---------+-------+
+| ename  | sal     | grade |
++--------+---------+-------+
+| SMITH  |  800.00 |     1 |
+| ALLEN  | 1600.00 |     3 |
+| WARD   | 1250.00 |     2 |
+| JONES  | 2975.00 |     4 |
+| MARTIN | 1250.00 |     2 |
+| BLAKE  | 2850.00 |     4 |
+| CLARK  | 2450.00 |     4 |
+| SCOTT  | 3000.00 |     4 |
+| KING   | 5000.00 |     5 |
+| TURNER | 1500.00 |     3 |
+| ADAMS  | 1100.00 |     1 |
+| JAMES  |  950.00 |     1 |
+| FORD   | 3000.00 |     4 |
+| MILLER | 1300.00 |     2 |
++--------+---------+-------+
+14 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>select
+  e.ename,e.sal,s.grade
+from
+  emp e
+inner join
+  salgrade s
+on
+  e.sal between s.losal and s.hisal
+;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ul><li>2.1.3 自连接：最大的特点是：一张表看作两张表</li></ul> <p>找出每个员工的上级领导，要求显示，员工名和对应的领导名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select e.ename 'empName',ecp.ename 'leaderName' from emp e inner join emp ecp on e.mgr=ecp.empno;
++---------+------------+
+| empName | leaderName |
++---------+------------+
+| SMITH   | FORD       |
+| ALLEN   | BLAKE      |
+| WARD    | BLAKE      |
+| JONES   | KING       |
+| MARTIN  | BLAKE      |
+| BLAKE   | KING       |
+| CLARK   | KING       |
+| SCOTT   | JONES      |
+| TURNER  | BLAKE      |
+| ADAMS   | SCOTT      |
+| JAMES   | BLAKE      |
+| FORD    | JONES      |
+| MILLER  | CLARK      |
++---------+------------+
+13 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li><p>2.2.1 外连接？</p></li> <li><p>什么是外连接，和内连接有什么区别？</p></li></ul> <ul><li><p>内连接：</p> <ol><li>假设A和B表进行连接，使用内连接的话，凡是A表和B表能够匹配上的记录查询出来，这就是内连接</li> <li>AB两张表没用主副之分，两张表是平等的</li></ol></li> <li><p>外连接：</p> <ol><li>假设A和B表连接，使用外连接的话，AB两张表中有一张表是主表，一张表是副表，主要查询主表中的数据，捎带查询副表，如果副表中的数据没有与主表中的数据匹配上副表自动模拟出NULL与之匹配</li></ol></li> <li><p>外连接的分类？</p> <ol><li>左外连接（左连接）：表示左边的这张表是主表</li> <li>右外连接（右连接）：表示右边的这张表是主表</li> <li>左连接有右连接的写法，右连接也会对应的做链接的写法</li></ol></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select a.ename empname,b.ename leadername from emp a left join emp b on a.mgr=b.empno;
++---------+------------+
+| empname | leadername |
++---------+------------+
+| SMITH   | FORD       |
+| ALLEN   | BLAKE      |
+| WARD    | BLAKE      |
+| JONES   | KING       |
+| MARTIN  | BLAKE      |
+| BLAKE   | KING       |
+| CLARK   | KING       |
+| SCOTT   | JONES      |
+| KING    | NULL       |
+| TURNER  | BLAKE      |
+| ADAMS   | SCOTT      |
+| JAMES   | BLAKE      |
+| FORD    | JONES      |
+| MILLER  | CLARK      |
++---------+------------+
+14 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>外连接（左外连接）：内连接的数据会少，只有13条，数据丢失</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select
+  a.ename empname,b.ename leadername
+from
+  emp a
+left outer join
+  emp b
+on
+  a.mgr=b.empno;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>右外连接</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select
+  a.ename empname,b.ename leadername
+from
+  emp b
+right outer join
+  emp a
+on
+  a.mgr=b.empno;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>outer 可以省略，这个只是可读性强</p> <p>区分内链接和外连接的标志主要是：是否右left、right，有必定是外连接，否必定是内连接，真实的使用场景肯定是外连接</p> <p>外连接最重要的特点是：主表的数据无条件的全部查询出来</p> <p>找出哪个部门没有员工？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select d.* from dept d left join emp e on d.deptno = e.deptno where e.deptno is null;
++--------+------------+--------+
+| DEPTNO | DNAME      | LOC    |
++--------+------------+--------+
+|     40 | OPERATIONS | BOSTON |
++--------+------------+--------+
+1 row in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>2.3 三张表怎么连接查询</li></ul> <p>找出每一个员工的部门名称以及工资等级</p> <p>注意：解释一下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A 
+join
+B
+on
+join
+C
+on
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>表示A表先和B表连接，连接之后A表和C表连接</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select e.ename,d.dname,s.grade from emp e left join dept d on e.deptno=d.deptno left join salgrade s on e.sal between s.losal and s.hisal;
++--------+------------+-------+
+| ename  | dname      | grade |
++--------+------------+-------+
+| SMITH  | RESEARCH   |     1 |
+| ALLEN  | SALES      |     3 |
+| WARD   | SALES      |     2 |
+| JONES  | RESEARCH   |     4 |
+| MARTIN | SALES      |     2 |
+| BLAKE  | SALES      |     4 |
+| CLARK  | ACCOUNTING |     4 |
+| SCOTT  | RESEARCH   |     4 |
+| KING   | ACCOUNTING |     5 |
+| TURNER | SALES      |     3 |
+| ADAMS  | RESEARCH   |     1 |
+| JAMES  | SALES      |     1 |
+| FORD   | RESEARCH   |     4 |
+| MILLER | ACCOUNTING |     2 |
++--------+------------+-------+
+14 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>找出每个一个员工的部门名称、工资等级、以及上级领导</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; SELECT
+    -&gt;   e.ename '员工',d.dname,s.grade,ec.ename '领导'
+    -&gt; FROM
+    -&gt;   emp e
+    -&gt; LEFT JOIN
+    -&gt;   dept d
+    -&gt; ON
+    -&gt;   e.deptno=d.deptno
+    -&gt; LEFT JOIN
+    -&gt;   salgrade s
+    -&gt; ON
+    -&gt;   e.sal BETWEEN s.losal AND s.hisal
+    -&gt; LEFT JOIN
+    -&gt;   emp ec
+    -&gt; ON
+    -&gt;   e.mgr=ec.empno
+    -&gt; ;
++--------+------------+-------+-------+
+|        | dname      | grade |       |
++--------+------------+-------+-------+
+| SMITH  | RESEARCH   |     1 | FORD  |
+| ALLEN  | SALES      |     3 | BLAKE |
+| WARD   | SALES      |     2 | BLAKE |
+| JONES  | RESEARCH   |     4 | KING  |
+| MARTIN | SALES      |     2 | BLAKE |
+| BLAKE  | SALES      |     4 | KING  |
+| CLARK  | ACCOUNTING |     4 | KING  |
+| SCOTT  | RESEARCH   |     4 | JONES |
+| KING   | ACCOUNTING |     5 | NULL  |
+| TURNER | SALES      |     3 | BLAKE |
+| ADAMS  | RESEARCH   |     1 | SCOTT |
+| JAMES  | SALES      |     1 | BLAKE |
+| FORD   | RESEARCH   |     4 | JONES |
+| MILLER | ACCOUNTING |     2 | CLARK |
++--------+------------+-------+-------+
+14 rows in set, 2 warnings (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">11/4/2020, 8:59:52 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/posts/MySql/三范式.html" class="prev">
+        数据库设计三范式
+      </a></span> <span class="next"><a href="/posts/MySql/增删改.html">
+        增删改
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5811eb28.js" defer></script><script src="/assets/js/2.1bcd2ba4.js" defer></script><script src="/assets/js/77.6e823c7c.js" defer></script>
+  </body>
+</html>

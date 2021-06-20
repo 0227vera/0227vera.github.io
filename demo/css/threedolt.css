@@ -1,0 +1,46 @@
+/* 单行文本 */
+.method1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 兼容性 */
+.method2 {
+    position: relative;
+    line-height: 20px;
+    height: 20px;
+    width: 180px;
+    padding-right: 20px;
+}
+.method2::after {
+    content: '...';
+    position: absolute;
+    width: 20px;
+    background: #fff;
+    top: 0;
+    right: 0px;
+}
+/* 多行文本 */
+.mult_line_method1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 200px;
+}
+/* 兼容性 */
+.mult_line_method2 {
+    position: relative;
+    line-height: 20px;
+    height: 60px;
+    width: 200px;
+    overflow: hidden;
+}
+.mult_line_method2::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    background: #fff;
+}

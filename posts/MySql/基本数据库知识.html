@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本数据库知识 | salvatore&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Live is what? Get busy living, Or get busy dying">
+    <link rel="preload" href="/assets/css/0.styles.09b7f27a.css" as="style"><link rel="preload" href="/assets/js/app.5811eb28.js" as="script"><link rel="preload" href="/assets/js/2.1bcd2ba4.js" as="script"><link rel="preload" href="/assets/js/75.337aaff5.js" as="script"><link rel="prefetch" href="/assets/js/10.d01e2cb3.js"><link rel="prefetch" href="/assets/js/100.4b5c8383.js"><link rel="prefetch" href="/assets/js/101.36e4ffa2.js"><link rel="prefetch" href="/assets/js/102.9ca13dc6.js"><link rel="prefetch" href="/assets/js/103.aa2d8ded.js"><link rel="prefetch" href="/assets/js/104.8f009307.js"><link rel="prefetch" href="/assets/js/105.a497e3f1.js"><link rel="prefetch" href="/assets/js/106.18fc23ae.js"><link rel="prefetch" href="/assets/js/107.225f8698.js"><link rel="prefetch" href="/assets/js/108.afb0da70.js"><link rel="prefetch" href="/assets/js/109.95e2afdb.js"><link rel="prefetch" href="/assets/js/11.8583efd5.js"><link rel="prefetch" href="/assets/js/110.58273b83.js"><link rel="prefetch" href="/assets/js/111.7e8ac226.js"><link rel="prefetch" href="/assets/js/112.0695e754.js"><link rel="prefetch" href="/assets/js/113.084e7cce.js"><link rel="prefetch" href="/assets/js/114.8512d4c0.js"><link rel="prefetch" href="/assets/js/115.fee0e3da.js"><link rel="prefetch" href="/assets/js/116.2d822d52.js"><link rel="prefetch" href="/assets/js/12.cb0c23bb.js"><link rel="prefetch" href="/assets/js/13.5a7dc34f.js"><link rel="prefetch" href="/assets/js/14.788460da.js"><link rel="prefetch" href="/assets/js/15.4e84d512.js"><link rel="prefetch" href="/assets/js/16.d57b0873.js"><link rel="prefetch" href="/assets/js/17.09413332.js"><link rel="prefetch" href="/assets/js/18.e2546c9d.js"><link rel="prefetch" href="/assets/js/19.808a9d72.js"><link rel="prefetch" href="/assets/js/20.3c17f526.js"><link rel="prefetch" href="/assets/js/21.c6a28f4b.js"><link rel="prefetch" href="/assets/js/22.62ae5e34.js"><link rel="prefetch" href="/assets/js/23.8296e711.js"><link rel="prefetch" href="/assets/js/24.a95199a5.js"><link rel="prefetch" href="/assets/js/25.0c370645.js"><link rel="prefetch" href="/assets/js/26.6f42c9c3.js"><link rel="prefetch" href="/assets/js/27.63ade94d.js"><link rel="prefetch" href="/assets/js/28.c86baa3c.js"><link rel="prefetch" href="/assets/js/29.dfa33feb.js"><link rel="prefetch" href="/assets/js/3.ad80d19e.js"><link rel="prefetch" href="/assets/js/30.24244679.js"><link rel="prefetch" href="/assets/js/31.c6ba2a0a.js"><link rel="prefetch" href="/assets/js/32.88f954a0.js"><link rel="prefetch" href="/assets/js/33.0c45cea6.js"><link rel="prefetch" href="/assets/js/34.dffdbda7.js"><link rel="prefetch" href="/assets/js/35.c62f1a95.js"><link rel="prefetch" href="/assets/js/36.0db41660.js"><link rel="prefetch" href="/assets/js/37.ef714cca.js"><link rel="prefetch" href="/assets/js/38.5bfbc215.js"><link rel="prefetch" href="/assets/js/39.a62c4856.js"><link rel="prefetch" href="/assets/js/4.0f40e03e.js"><link rel="prefetch" href="/assets/js/40.7d3a539a.js"><link rel="prefetch" href="/assets/js/41.af9e9d42.js"><link rel="prefetch" href="/assets/js/42.b805e114.js"><link rel="prefetch" href="/assets/js/43.d63195a7.js"><link rel="prefetch" href="/assets/js/44.2a7d304f.js"><link rel="prefetch" href="/assets/js/45.99ec876e.js"><link rel="prefetch" href="/assets/js/46.d0fd131d.js"><link rel="prefetch" href="/assets/js/47.e1b71b32.js"><link rel="prefetch" href="/assets/js/48.eca92f8c.js"><link rel="prefetch" href="/assets/js/49.18a56810.js"><link rel="prefetch" href="/assets/js/5.6251623e.js"><link rel="prefetch" href="/assets/js/50.40e84722.js"><link rel="prefetch" href="/assets/js/51.d33e2ca2.js"><link rel="prefetch" href="/assets/js/52.30f662d7.js"><link rel="prefetch" href="/assets/js/53.434e5d96.js"><link rel="prefetch" href="/assets/js/54.b320dc90.js"><link rel="prefetch" href="/assets/js/55.7467cd5d.js"><link rel="prefetch" href="/assets/js/56.8d105beb.js"><link rel="prefetch" href="/assets/js/57.11fd0b96.js"><link rel="prefetch" href="/assets/js/58.d069c47a.js"><link rel="prefetch" href="/assets/js/59.df1167e7.js"><link rel="prefetch" href="/assets/js/6.5f173d71.js"><link rel="prefetch" href="/assets/js/60.c48d9ca6.js"><link rel="prefetch" href="/assets/js/61.ca8637ce.js"><link rel="prefetch" href="/assets/js/62.3fe4b6f6.js"><link rel="prefetch" href="/assets/js/63.f7ab9b9f.js"><link rel="prefetch" href="/assets/js/64.2332036f.js"><link rel="prefetch" href="/assets/js/65.b2b33067.js"><link rel="prefetch" href="/assets/js/66.c8cee1d0.js"><link rel="prefetch" href="/assets/js/67.53c6e8e1.js"><link rel="prefetch" href="/assets/js/68.6e356321.js"><link rel="prefetch" href="/assets/js/69.4b97ff42.js"><link rel="prefetch" href="/assets/js/7.a96845db.js"><link rel="prefetch" href="/assets/js/70.4fb4bbab.js"><link rel="prefetch" href="/assets/js/71.5d060a53.js"><link rel="prefetch" href="/assets/js/72.21498d49.js"><link rel="prefetch" href="/assets/js/73.79c79b25.js"><link rel="prefetch" href="/assets/js/74.e8a6a8c6.js"><link rel="prefetch" href="/assets/js/76.441f38e1.js"><link rel="prefetch" href="/assets/js/77.6e823c7c.js"><link rel="prefetch" href="/assets/js/78.f0099c68.js"><link rel="prefetch" href="/assets/js/79.255a8000.js"><link rel="prefetch" href="/assets/js/8.f47c3b01.js"><link rel="prefetch" href="/assets/js/80.c6f5c44b.js"><link rel="prefetch" href="/assets/js/81.dddd517d.js"><link rel="prefetch" href="/assets/js/82.9c14cdeb.js"><link rel="prefetch" href="/assets/js/83.eceeb699.js"><link rel="prefetch" href="/assets/js/84.eabf3ddb.js"><link rel="prefetch" href="/assets/js/85.6636f6b6.js"><link rel="prefetch" href="/assets/js/86.e2b93195.js"><link rel="prefetch" href="/assets/js/87.58176135.js"><link rel="prefetch" href="/assets/js/88.adc95a3d.js"><link rel="prefetch" href="/assets/js/89.b0e250c8.js"><link rel="prefetch" href="/assets/js/9.0f4582c7.js"><link rel="prefetch" href="/assets/js/90.063a4723.js"><link rel="prefetch" href="/assets/js/91.3618430c.js"><link rel="prefetch" href="/assets/js/92.9b60f1ad.js"><link rel="prefetch" href="/assets/js/93.74bd1b94.js"><link rel="prefetch" href="/assets/js/94.c71fe7ea.js"><link rel="prefetch" href="/assets/js/95.9a7f87fd.js"><link rel="prefetch" href="/assets/js/96.3511f478.js"><link rel="prefetch" href="/assets/js/97.55c83c1d.js"><link rel="prefetch" href="/assets/js/98.11468cae.js"><link rel="prefetch" href="/assets/js/99.5921fac5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.09b7f27a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">salvatore's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Posts" class="dropdown-title"><span class="title">Posts</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/posts/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/posts/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/posts/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MP/" class="nav-link">
+  MiniProgrem
+</a></li><li class="dropdown-item"><!----> <a href="/posts/nodeJS/" class="nav-link">
+  nodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MySql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/posts/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/posts/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/posts/internet/" class="nav-link">
+  internet
+</a></li><li class="dropdown-item"><!----> <a href="/posts/MicroFE/" class="nav-link">
+  MicroFrontends
+</a></li><li class="dropdown-item"><!----> <a href="/posts/tool/" class="nav-link">
+  tool
+</a></li><li class="dropdown-item"><!----> <a href="/posts/question/" class="nav-link">
+  question
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  Essay
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MiniProgrem</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>nodeJS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>mysql</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/posts/MySql/" aria-current="page" class="sidebar-link">MySql 关系性数据库</a></li><li><a href="/posts/MySql/基本数据库知识.html" class="active sidebar-link">基本数据库知识</a></li><li><a href="/posts/MySql/有哪些数据库管理系统.html" class="sidebar-link">有哪些数据库管理系统</a></li><li><a href="/posts/MySql/储存引擎.html" class="sidebar-link">储存引擎</a></li><li><a href="/posts/MySql/三范式.html" class="sidebar-link">数据库设计三范式</a></li><li><a href="/posts/MySql/外连接查询.html" class="sidebar-link">外连接查询</a></li><li><a href="/posts/MySql/增删改.html" class="sidebar-link">增删改</a></li><li><a href="/posts/MySql/limit.html" class="sidebar-link">union(可以将查询结果集相加)</a></li><li><a href="/posts/MySql/约束.html" class="sidebar-link">约束（constraint）</a></li><li><a href="/posts/MySql/子查询.html" class="sidebar-link">子查询</a></li><li><a href="/posts/MySql/索引.html" class="sidebar-link">索引</a></li><li><a href="/posts/MySql/事务.html" class="sidebar-link">事务</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>internet</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MicroFrontends</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>tool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>question</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基本数据库知识"><a href="#基本数据库知识" class="header-anchor">#</a> 基本数据库知识</h1> <h2 id="单表问题"><a href="#单表问题" class="header-anchor">#</a> 单表问题</h2> <h2 id="_1-sql、db、dbms分别是什么，他们的关系是什么关系"><a href="#_1-sql、db、dbms分别是什么，他们的关系是什么关系" class="header-anchor">#</a> 1. SQL、DB、DBMS分别是什么，他们的关系是什么关系</h2> <ul><li><p>DB：DataBase（数据库，数据库实际上再硬盘上以文件的形式存在）</p></li> <li><p>DBMS：DataBase Management System （数据库管理系统，常见的有：MySQL、Oracle、DB2...）</p></li> <li><p>SQL：</p></li></ul> <ol><li>结构化查询语言，是一门标准通用的语言。标准的sql适合于所有的数据库产品</li> <li>SQL数据高级语言，只要能看懂英文单词的，写出来的sql语句，可以读懂什么意思</li> <li>SQL语句执行的时候，实际上内部也先进行了编译，然后再执行sql。（sql语句的编辑又DNMS完成）</li></ol> <ul><li>DBMS：负责执行sql语句，通过执行语句来操作DB当中的数据</li></ul> <blockquote><p>DBMS -(执行)--&gt; SQL -(操作)--&gt; DB</p></blockquote> <h2 id="_2-表"><a href="#_2-表" class="header-anchor">#</a> 2. 表</h2> <ul><li><p>表：table是数据库的基本组成单元，所有的数据都以表的形式组织，目的是可读性强</p></li> <li><p>一个表包含行和列：</p></li></ul> <ol><li>行：被称为数据/记录（data）</li> <li>列：被称为字段（column）</li></ol> <p>每一个字段应该包含的属性？字段名、数据类型、相关的约束条件</p> <h2 id="_3-学习mysql主要是学习通用的sql语句，那么sql语句包括增删改查，sql语句怎么分类呢？"><a href="#_3-学习mysql主要是学习通用的sql语句，那么sql语句包括增删改查，sql语句怎么分类呢？" class="header-anchor">#</a> 3. 学习MySQL主要是学习通用的SQL语句，那么SQL语句包括增删改查，SQL语句怎么分类呢？</h2> <ul><li>DQL （数据查询语句）：查询语句，凡是select语句都是DQL</li> <li>DML （数据操作语句）：insert、delete、update，对表当中的数据进行增删改</li> <li>DDL （数据定义语言）：create、drop、alter、对表结构的增删改</li> <li>TCL （事务控制语言）：commit提交事务、rollback回滚事务。（TCL中的T是transaction）</li> <li>DCL （数据控制语言）：grant授权，revoke撤销劝降等</li></ul> <h2 id="_4-导入数据（联系的过程中使用的都是导入的数据）"><a href="#_4-导入数据（联系的过程中使用的都是导入的数据）" class="header-anchor">#</a> 4. 导入数据（联系的过程中使用的都是导入的数据）</h2> <ol><li><p>登陆MySQL数据库系统</p></li> <li><p>查看有哪些数据库：show databases;（这个不是SQL语句，数据MySQL的命令）</p></li> <li><p>创建数据自己的数据库：create database salvatoredata;</p></li> <li><p>使用salvatoredata数据库：use salvatoredata;</p></li> <li><p>查看当前使用的数据库中有哪些表：show tables;</p></li> <li><p>初始化数据：source 文件路径</p></li></ol> <h2 id="_5-spl脚本"><a href="#_5-spl脚本" class="header-anchor">#</a> 5. spl脚本</h2> <p>文件以sql结尾，这样的文件被称为“sql脚本”，什么是sql脚本呢？</p> <p>但一个文件的扩展名是.sql，并且该文件编写了大量的sql语句，我们称这样的文件为sql脚本</p> <h2 id="_6-删除数据库：drop-database-salvatoredata"><a href="#_6-删除数据库：drop-database-salvatoredata" class="header-anchor">#</a> 6. 删除数据库：drop database salvatoredata</h2> <h2 id="_7-查看表结构：desc-表名"><a href="#_7-查看表结构：desc-表名" class="header-anchor">#</a> 7. 查看表结构：desc 表名</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; desc emp;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| EMPNO    | int(4)      | NO   | PRI | NULL    |       |
+| ENAME    | varchar(10) | YES  |     | NULL    |       |
+| JOB      | varchar(9)  | YES  |     | NULL    |       |
+| MGR      | int(4)      | YES  |     | NULL    |       |
+| HIREDATE | date        | YES  |     | NULL    |       |
+| SAL      | double(7,2) | YES  |     | NULL    |       |
+| COMM     | double(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)      | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+mysql&gt; desc dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(2)      | NO   | PRI | NULL    |       |
+| DNAME  | varchar(14) | YES  |     | NULL    |       |
+| LOC    | varchar(13) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+mysql&gt; desc salgrade;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| GRADE | int(11) | YES  |     | NULL    |       |
+| LOSAL | int(11) | YES  |     | NULL    |       |
+| HISAL | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="_8-表格中的数据：select-from-表名-（这个是sql语句）"><a href="#_8-表格中的数据：select-from-表名-（这个是sql语句）" class="header-anchor">#</a> 8. 表格中的数据：select * from 表名;（这个是SQL语句）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select * from emp;
++-------+--------+-----------+------+------------+---------+---------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
++-------+--------+-----------+------+------------+---------+---------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="_9-常见命令"><a href="#_9-常见命令" class="header-anchor">#</a> 9. 常见命令</h2> <ul><li>create database name; 创建数据库</li> <li>use name; 使用哪个数据库</li> <li>select database(); 查看使用的哪个数据库</li> <li>select version(); 查看数据库版本</li> <li>\c 结束一条语句</li> <li>exit 退出mysql</li> <li>show tables from name; 查看name数据库的表</li></ul> <h2 id="_10-查看创建表的语句"><a href="#_10-查看创建表的语句" class="header-anchor">#</a> 10. 查看创建表的语句</h2> <ul><li>show create table name; 查看name表的创建语句</li></ul> <h2 id="_11-简单的查询语句（dql）"><a href="#_11-简单的查询语句（dql）" class="header-anchor">#</a> 11. 简单的查询语句（DQL）</h2> <ul><li>语法格式： select 字段名1,字段名2,字段名3... from 表名;(任何一条sql语句以分号结尾)</li></ul> <p>注意：</p> <ol><li><p>任何一条sql语句以分号结尾</p></li> <li><p>sql语句不区分大小写</p></li> <li><p>字段可以经行数学计算，计算的别名使用as：select sal * 12 as 'allSal' from emp; as可以使用空格代替</p></li> <li><p>实际开发中不建议使用 select * from tablename;效率比较低</p></li> <li><p>条件查询：</p></li></ol> <p>select 字段 from 表名 where 条件；执行顺序是：先from，然后where，最后select；</p> <p>查询工资等于5000的员工姓名：select ename from emp where sal = 5000;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename from emp where sal = 5000;
++-------+
+| ename |
++-------+
+| KING  |
++-------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>查询smith的工资：select sal from emp where ename='smith';</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select sal from emp where ename='smith';
++--------+
+| sal    |
++--------+
+| 800.00 |
++--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>查询工资超过3000的人：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select ename,sal from emp where sal &gt;= 1000;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| ALLEN  | 1600.00 |
+| WARD   | 1250.00 |
+| JONES  | 2975.00 |
+| MARTIN | 1250.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| SCOTT  | 3000.00 |
+| KING   | 5000.00 |
+| TURNER | 1500.00 |
+| ADAMS  | 1100.00 |
+| FORD   | 3000.00 |
+| MILLER | 1300.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>找到1100到3000之间的人；</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp where sal &gt;=1100 and sal &lt;=3000;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| ALLEN  | 1600.00 |
+| WARD   | 1250.00 |
+| JONES  | 2975.00 |
+| MARTIN | 1250.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| SCOTT  | 3000.00 |
+| TURNER | 1500.00 |
+| ADAMS  | 1100.00 |
+| FORD   | 3000.00 |
+| MILLER | 1300.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp where sal between 1100 and 3000;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| ALLEN  | 1600.00 |
+| WARD   | 1250.00 |
+| JONES  | 2975.00 |
+| MARTIN | 1250.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| SCOTT  | 3000.00 |
+| TURNER | 1500.00 |
+| ADAMS  | 1100.00 |
+| FORD   | 3000.00 |
+| MILLER | 1300.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ul><li>between ... and ...：用与数字之间是闭区间，用于字符之间是左闭区右开</li></ul> <p>找出那些人没有津贴？ 在数据库中NULL不是一个值，代表什么也没有，为空
+空不是一个，不能用等号衡量
+必须使用is null 或者 is not null</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal,comm from emp where comm is null;
++--------+---------+------+
+| ename  | sal     | comm |
++--------+---------+------+
+| SMITH  |  800.00 | NULL |
+| JONES  | 2975.00 | NULL |
+| BLAKE  | 2850.00 | NULL |
+| CLARK  | 2450.00 | NULL |
+| SCOTT  | 3000.00 | NULL |
+| KING   | 5000.00 | NULL |
+| ADAMS  | 1100.00 | NULL |
+| JAMES  |  950.00 | NULL |
+| FORD   | 3000.00 | NULL |
+| MILLER | 1300.00 | NULL |
++--------+---------+------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal,comm from emp where comm is null or comm = 0;
++--------+---------+------+
+| ename  | sal     | comm |
++--------+---------+------+
+| SMITH  |  800.00 | NULL |
+| JONES  | 2975.00 | NULL |
+| BLAKE  | 2850.00 | NULL |
+| CLARK  | 2450.00 | NULL |
+| SCOTT  | 3000.00 | NULL |
+| KING   | 5000.00 | NULL |
+| TURNER | 1500.00 | 0.00 |
+| ADAMS  | 1100.00 | NULL |
+| JAMES  |  950.00 | NULL |
+| FORD   | 3000.00 | NULL |
+| MILLER | 1300.00 | NULL |
++--------+---------+------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>找工资超过1000,部门为20或者30的人</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal,deptno from emp where  sal &gt;= 1000 and (deptno = 20 or deptno = 30);
++--------+---------+--------+
+| ename  | sal     | deptno |
++--------+---------+--------+
+| ALLEN  | 1600.00 |     30 |
+| WARD   | 1250.00 |     30 |
+| JONES  | 2975.00 |     20 |
+| MARTIN | 1250.00 |     30 |
+| BLAKE  | 2850.00 |     30 |
+| SCOTT  | 3000.00 |     20 |
+| TURNER | 1500.00 |     30 |
+| ADAMS  | 1100.00 |     20 |
+| FORD   | 3000.00 |     20 |
++--------+---------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>不确定的时候就加()</p> <p>找到工作岗位为salesman和manager的员工</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,job,sal from emp where job = 'salesman' or job = 'manager';
++--------+----------+---------+
+| ename  | job      | sal     |
++--------+----------+---------+
+| ALLEN  | SALESMAN | 1600.00 |
+| WARD   | SALESMAN | 1250.00 |
+| JONES  | MANAGER  | 2975.00 |
+| MARTIN | SALESMAN | 1250.00 |
+| BLAKE  | MANAGER  | 2850.00 |
+| CLARK  | MANAGER  | 2450.00 |
+| TURNER | SALESMAN | 1500.00 |
++--------+----------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,job,sal from emp where job in ('salesman','manager');
++--------+----------+---------+
+| ename  | job      | sal     |
++--------+----------+---------+
+| ALLEN  | SALESMAN | 1600.00 |
+| WARD   | SALESMAN | 1250.00 |
+| JONES  | MANAGER  | 2975.00 |
+| MARTIN | SALESMAN | 1250.00 |
+| BLAKE  | MANAGER  | 2850.00 |
+| CLARK  | MANAGER  | 2450.00 |
+| TURNER | SALESMAN | 1500.00 |
++--------+----------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li><p>in 和 or 可以互换， 还有not in，注意括号不是区间啊</p></li> <li><p>模糊查询like</p></li></ul> <p>在模糊查询必须必须掌握两个特殊的符号，一个是%，一个是_（有点正则的意思）</p> <p>%---&gt;任意多个字符
+_---&gt;任意一个字符</p> <p>找出名字中带O的？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select * from emp where ename like '%o%';
++-------+-------+---------+------+------------+---------+------+--------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+-------+---------+------+------------+---------+------+--------+
+|  7566 | JONES | MANAGER | 7839 | 1981-04-02 | 2975.00 | NULL |     20 |
+|  7788 | SCOTT | ANALYST | 7566 | 1987-04-19 | 3000.00 | NULL |     20 |
+|  7902 | FORD  | ANALYST | 7566 | 1981-12-03 | 3000.00 | NULL |     20 |
++-------+-------+---------+------+------------+---------+------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>找出第一个字母为J的人</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select * from emp where ename like 'j%';
++-------+-------+---------+------+------------+---------+------+--------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+-------+---------+------+------------+---------+------+--------+
+|  7566 | JONES | MANAGER | 7839 | 1981-04-02 | 2975.00 | NULL |     20 |
+|  7900 | JAMES | CLERK   | 7698 | 1981-12-03 |  950.00 | NULL |     30 |
++-------+-------+---------+------+------------+---------+------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>找出名字中有下划线的？像正则一样转义</p> <p>select * from emp where ename like '%_%';</p> <h2 id="_13-排序（升序、降序）"><a href="#_13-排序（升序、降序）" class="header-anchor">#</a> 13. 排序（升序、降序）</h2> <p>按照工资升序，找到员工姓名？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp order by sal;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| SMITH  |  800.00 |
+| JAMES  |  950.00 |
+| ADAMS  | 1100.00 |
+| WARD   | 1250.00 |
+| MARTIN | 1250.00 |
+| MILLER | 1300.00 |
+| TURNER | 1500.00 |
+| ALLEN  | 1600.00 |
+| CLARK  | 2450.00 |
+| BLAKE  | 2850.00 |
+| JONES  | 2975.00 |
+| FORD   | 3000.00 |
+| SCOTT  | 3000.00 |
+| KING   | 5000.00 |
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>注意：order by 默认是升序</p> <ol><li>asc---&gt; 升序</li> <li>desc---&gt;降序</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp order by sal desc;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| KING   | 5000.00 |
+| SCOTT  | 3000.00 |
+| FORD   | 3000.00 |
+| JONES  | 2975.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| ALLEN  | 1600.00 |
+| TURNER | 1500.00 |
+| MILLER | 1300.00 |
+| MARTIN | 1250.00 |
+| WARD   | 1250.00 |
+| ADAMS  | 1100.00 |
+| JAMES  |  950.00 |
+| SMITH  |  800.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>按照工资降序排列，工资一样的按照名字的升序排列</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp order by sal desc,ename;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| KING   | 5000.00 |
+| FORD   | 3000.00 |
+| SCOTT  | 3000.00 |
+| JONES  | 2975.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| ALLEN  | 1600.00 |
+| TURNER | 1500.00 |
+| MILLER | 1300.00 |
+| MARTIN | 1250.00 |
+| WARD   | 1250.00 |
+| ADAMS  | 1100.00 |
+| JAMES  |  950.00 |
+| SMITH  |  800.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li>越靠前的字段作用大，后面的可能都用不上，后面的字段只会在前面的字段相等的时候才会用的到</li></ul> <p>排序可能根据前面的字段的顺序排列</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp order by 1;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| ADAMS  | 1100.00 |
+| ALLEN  | 1600.00 |
+| BLAKE  | 2850.00 |
+| CLARK  | 2450.00 |
+| FORD   | 3000.00 |
+| JAMES  |  950.00 |
+| JONES  | 2975.00 |
+| KING   | 5000.00 |
+| MARTIN | 1250.00 |
+| MILLER | 1300.00 |
+| SCOTT  | 3000.00 |
+| SMITH  |  800.00 |
+| TURNER | 1500.00 |
+| WARD   | 1250.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp order by 2;
++--------+---------+
+| ename  | sal     |
++--------+---------+
+| SMITH  |  800.00 |
+| JAMES  |  950.00 |
+| ADAMS  | 1100.00 |
+| WARD   | 1250.00 |
+| MARTIN | 1250.00 |
+| MILLER | 1300.00 |
+| TURNER | 1500.00 |
+| ALLEN  | 1600.00 |
+| CLARK  | 2450.00 |
+| BLAKE  | 2850.00 |
+| JONES  | 2975.00 |
+| FORD   | 3000.00 |
+| SCOTT  | 3000.00 |
+| KING   | 5000.00 |
++--------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>找出工作岗位是salesman的员工，并且要求工资的降序排列</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal,job from emp where job in ('salesman') order by sal desc;
++--------+---------+----------+
+| ename  | sal     | job      |
++--------+---------+----------+
+| ALLEN  | 1600.00 | SALESMAN |
+| TURNER | 1500.00 | SALESMAN |
+| WARD   | 1250.00 | SALESMAN |
+| MARTIN | 1250.00 | SALESMAN |
++--------+---------+----------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>select
+  names     3
+from
+  tablename 1
+where
+  condition 2
+order by
+...         4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>order by是最后执行的，肯定是把所有的数据查出来之后排序的，这一点还是比较好理解的</p> <h2 id="_14-分组函数"><a href="#_14-分组函数" class="header-anchor">#</a> 14. 分组函数</h2> <ol><li>count 计数</li> <li>sum 求和</li> <li>avg 平均值</li> <li>max 最大值</li> <li>min 最小值</li></ol> <p>找出工资总和？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select sum(sal) from emp;
++----------+
+| sum(sal) |
++----------+
+| 29025.00 |
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>分组函数一共5个，都是对某一组数据进行操作，分组函数还有另一个名字，多行处理函数
+多行处理函数的特点：输入多行，最终输出一行</p> <p>分组函数自动忽略NULL</p> <p>找出工资高于平均工资的人？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp where sal &gt; avg(sal);
+ERROR 1111 (HY000): Invalid use of group function
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>原因：分组函数不可直接出现在where中，为什么呢？
+因为group by是在where之后执行的</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>select    5
+  ...
+from      1
+  ...
+where     2
+  ...
+group by  3
+  ...
+having    4
+  ...
+order by  6
+  ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,sal from emp where sal &gt; (select avg(sal) from emp);
++-------+---------+
+| ename | sal     |
++-------+---------+
+| JONES | 2975.00 |
+| BLAKE | 2850.00 |
+| CLARK | 2450.00 |
+| SCOTT | 3000.00 |
+| KING  | 5000.00 |
+| FORD  | 3000.00 |
++-------+---------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>两步合成一步</p> <p>count (*) 和 count（字段）之间的区别？</p> <p>count(*)：不是统计某个字段中的数据的个数，而是统计总记录的条数（和字段没有关系）
+count（字段）：记录某个字段不为NULL的总数量</p> <p>分组函数也能够组合起来用：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select sum(sal),max(sal),min(sal),avg(sal),count(sal) from emp;
++----------+----------+----------+-------------+------------+
+| sum(sal) | max(sal) | min(sal) | avg(sal)    | count(sal) |
++----------+----------+----------+-------------+------------+
+| 29025.00 |  5000.00 |   800.00 | 2073.214286 |         14 |
++----------+----------+----------+-------------+------------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_15-补充：什么是单行处理函数？"><a href="#_15-补充：什么是单行处理函数？" class="header-anchor">#</a> 15. 补充：什么是单行处理函数？</h2> <p>输入一行，输出一行？</p> <p>计算每个员工的年薪？：select ename, (sal+comm)*12 yearsal from emp;</p> <p>在数据库中数学表达式中只要有NULL，最后的结果都是NULL</p> <blockquote><p>数据库中，只要有NULL参与的运算结果一定是NULL</p></blockquote> <p>ifnull() 空处理函数？
+if (可能为null的数据,被当作什么来处理)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select ename,(sal+ifnull(comm,0))*12 yearsal from emp;
++--------+----------+
+| ename  | yearsal  |
++--------+----------+
+| SMITH  |  9600.00 |
+| ALLEN  | 22800.00 |
+| WARD   | 21000.00 |
+| JONES  | 35700.00 |
+| MARTIN | 31800.00 |
+| BLAKE  | 34200.00 |
+| CLARK  | 29400.00 |
+| SCOTT  | 36000.00 |
+| KING   | 60000.00 |
+| TURNER | 18000.00 |
+| ADAMS  | 13200.00 |
+| JAMES  | 11400.00 |
+| FORD   | 36000.00 |
+| MILLER | 15600.00 |
++--------+----------+
+
+mysql&gt; select sum(comm) from emp;
++-----------+
+| sum(comm) |
++-----------+
+|   2200.00 |
++-----------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>说明sum是忽略了null在计算的</p> <h2 id="_16-group-by-和having"><a href="#_16-group-by-和having" class="header-anchor">#</a> 16. group by 和having</h2> <ol><li>group by ：按某个字段或者某些字段进行分组</li> <li>having ：having是对分组之后的数据进行过滤</li></ol> <p>指出每个工作岗位的最高薪资</p> <p>注意： 分组函数一般都会和group by 联合使用，这也是为什么它被成为分组函数的原因。
+并且任何一个分组函数（count、sum、avg、max、min）都是在group by语句执行结束之后才会执行的
+当一条sql语句没有group by的话，整张表的数据会自成一组</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select max(sal),job from emp group by job;
++----------+-----------+
+| max(sal) | job       |
++----------+-----------+
+|  3000.00 | ANALYST   |
+|  1300.00 | CLERK     |
+|  2975.00 | MANAGER   |
+|  5000.00 | PRESIDENT |
+|  1600.00 | SALESMAN  |
++----------+-----------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select max(sal),job,ename from emp group by job;
++----------+-----------+-------+
+| max(sal) | job       | ename |
++----------+-----------+-------+
+|  3000.00 | ANALYST   | SCOTT |
+|  1300.00 | CLERK     | SMITH |
+|  2975.00 | MANAGER   | JONES |
+|  5000.00 | PRESIDENT | KING  |
+|  1600.00 | SALESMAN  | ALLEN |
++----------+-----------+-------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>第二个查询的数据毫无意义，在Oracle数据库中会报错，因为Oracle的语法规则比MySQL语法规则严谨</p> <p>记住一个规则：当一条语句中有group by的话，select后面只能跟分组函数和参与分组的字段，就像第一个查询</p> <p>找出每个部门不同工作岗位的最高薪资</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select deptno,job,max(sal) from emp group by deptno,job;
++--------+-----------+----------+
+| deptno | job       | max(sal) |
++--------+-----------+----------+
+|     10 | CLERK     |  1300.00 |
+|     10 | MANAGER   |  2450.00 |
+|     10 | PRESIDENT |  5000.00 |
+|     20 | ANALYST   |  3000.00 |
+|     20 | CLERK     |  1100.00 |
+|     20 | MANAGER   |  2975.00 |
+|     30 | CLERK     |   950.00 |
+|     30 | MANAGER   |  2850.00 |
+|     30 | SALESMAN  |  1600.00 |
++--------+-----------+----------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>找出每个部门的最高薪资，要求显示薪资大于2900的数据</p> <p>找出每个部门的最高薪资：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select max(sal),deptno from emp group by deptno;
++----------+--------+
+| max(sal) | deptno |
++----------+--------+
+|  5000.00 |     10 |
+|  3000.00 |     20 |
+|  2850.00 |     30 |
++----------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>要求显示薪资大于2900的数据：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select max(sal),deptno from emp group by deptno having max(sal) &gt; 2900;
++----------+--------+
+| max(sal) | deptno |
++----------+--------+
+|  5000.00 |     10 |
+|  3000.00 |     20 |
++----------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面的效率较低，以下的效率较高</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; select max(sal),deptno from emp where sal &gt; 2900 group by deptno;
++----------+--------+
+| max(sal) | deptno |
++----------+--------+
+|  5000.00 |     10 |
+|  3000.00 |     20 |
++----------+--------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>能够使用where就不要使用having，但是有些时候where搞不定的，就要使用having了</p> <h2 id="_17-总结一个完整的dql语句怎么写？"><a href="#_17-总结一个完整的dql语句怎么写？" class="header-anchor">#</a> 17. 总结一个完整的DQL语句怎么写？</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>select    5
+  ...
+from      1
+  ...
+where     2
+  ...
+group by  3
+  ...
+having    4
+  ...
+order by  6
+  ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">11/4/2020, 8:59:52 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/posts/MySql/" class="prev router-link-active">
+        MySql 关系性数据库
+      </a></span> <span class="next"><a href="/posts/MySql/有哪些数据库管理系统.html">
+        有哪些数据库管理系统
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5811eb28.js" defer></script><script src="/assets/js/2.1bcd2ba4.js" defer></script><script src="/assets/js/75.337aaff5.js" defer></script>
+  </body>
+</html>
