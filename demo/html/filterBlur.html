@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+ 
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			html,
+			body {
+				font-size: 19px;
+				font-family: 'Verdana', 'Arial';
+				color: rgba(0, 0, 0, 0.8);
+			}
+			
+			.main {
+				margin: 10px auto;
+				width: 800px;
+				height: 400px;
+				position: relative;
+				background: url(img.jpg) left top;
+				background-size: 800px 400px;
+			}
+			
+			.content {
+        /* 是否显示上层的磨砂 */
+				/* display: none; */ 
+				width: 800px;
+				height: 400px;
+				position: absolute;
+				top: 50%;
+				color: #fff;
+				left: 50%;
+				overflow: hidden;
+				margin-top: -200px;
+				margin-left: -400px;
+				border-radius: 10px;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+				z-index: 100;
+				padding: 50px;
+				opacity: .7;/* 控制文字的显示不透明度 */
+				box-sizing: border-box;
+				/*不会把盒子撑开*/
+			}
+			
+			.content::before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				z-index: -1; /* 注意x-index的使用 */
+				/*-1 可以当背景*/
+				-webkit-filter: blur(20px);
+				filter: blur(20px);
+				margin: -30px;  /*消除边缘透明*/
+				background: url(img.jpg) left top;/* 通过改变宽高改变下层的模糊度 */
+				background-size: 1030px 460px;
+				/*平铺*/
+				background-attachment: fixed;
+				/*位置固定*/
+			}
+			
+			.content h1 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			.content p {
+				line-height: 1.7;
+				/*1.7倍行间距*/
+			}
+			.container{
+				width: 800px;
+				height: 400px;
+				text-align: center;
+				line-height: 400px;
+				color: #fff;
+			}
+		</style>
+	</head>
+ 
+	<body>
+		<div class="main">
+			<div class="container">测试文字：爱好广泛拉萨的结果返回安科技和</div>
+			<div class="content">
+				<h1>科比·布莱恩特</h1>
+				<p>科比·布莱恩特（Kobe Bryant），1978年8月23日出生于美国宾夕法尼亚州费城，前美国职业篮球运动员，司职得分后卫/小前锋（锋卫摇摆人），绰号“黑曼巴”/“小飞侠”。 [1]  1996年第1轮第13位被夏洛特黄蜂队选中，后来被交易到湖人队。整个NBA生涯（1996年-2016年）全部效力于NBA洛杉矶湖人队，是前NBA球员乔·布莱恩特的儿子。</p>
+			</div>
+		</div>
+	</body>
+ 
+</html>

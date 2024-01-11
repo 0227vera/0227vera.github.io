@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素的垂直水平居中</title>
+    <style>
+        /* 注意兼容性 */
+        /* 给相同的容器  */
+        .container {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        /* 第一种情况 */
+        .situation1 {
+            width: 200px;
+            height: 300px;
+            background: cyan;
+            overflow: hidden;
+        }
+        .situation1 div {
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            margin-left: 50px;
+            background: pink;
+        }
+        /* 第二种情况 */
+        .situation2 {
+            position: relative;
+            width: 70%;
+            height: 50%;
+            background: cyan;
+        }
+        .situation2 div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+        /* 第三种情况 */
+        .situation3 {
+            position: relative;
+            width: 80%;
+            height: 67%;
+            background: cyan;
+        }
+        .situation3 div {
+            width: 40%;
+            height: 35%;
+            background: pink;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .situation4 {
+            width: 500px;
+            height: 500px;
+            background: cyan;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .situation4 div{
+            background-color: #000;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ol>
+            <li>
+                <span>已知父元素和子元素宽高</span>
+                <div class="container">
+                    <div class="situation1">
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>已知子元素的宽高父元素宽高未知</span>
+                <div class="container">
+                    <div class="situation2">
+                        <div></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>父元素和子元素的高度未知</span>
+                <div class="container">
+                    <div class="situation3">
+                        <div></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>table居中</span>
+                <div class="container">
+                    <div class="situation4">
+                        <div></div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

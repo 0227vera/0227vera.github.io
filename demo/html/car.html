@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+    /* 思想和双飞翼布局大同小异 */
+        .box {
+            overflow: hidden;
+            padding: 0 300px 0 200px;
+        }
+        /* 重要是把这个地方想明白就好了 */
+        .left,
+        .middle,
+        .right {
+            float: left;
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+            position: relative;
+        }
+        .left {
+            width: 200px;
+            background: cyan;
+            margin-left: -100%;
+            left: -200px;
+        }
+        .right {
+            width: 300px;
+            background: deeppink;
+            margin-left: -300px;
+            right: -300px;
+        }
+        .middle {
+            width: 100%;
+            min-height: 10px;
+            background: #1abc9c;
+        }
+        header,footer {
+            width: 100%;
+            height: 100px;
+            background: pink;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>我是头部</header>
+    <main class="box">
+        <div class="middle">
+                
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </main>
+    <footer>我是尾部</footer>
+    <!-- 稍加变化就可以实现两栏布局 -->
+</body>
+
+</html>
